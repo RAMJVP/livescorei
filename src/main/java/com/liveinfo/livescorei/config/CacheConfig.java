@@ -22,7 +22,7 @@ public class CacheConfig  {
             cacheManager.createCache("methodCache", Eh107Configuration.fromEhcacheCacheConfiguration(
                     CacheConfigurationBuilder.newCacheConfigurationBuilder(Object.class, Object.class,
                             ResourcePoolsBuilder.heap(100))
-                            .withExpiry(ExpiryPolicyBuilder.timeToLiveExpiration(Duration.ofSeconds(30)))
+                            .withExpiry(ExpiryPolicyBuilder.timeToLiveExpiration(Duration.ofSeconds(25)))
                             .build()));
         };
     }

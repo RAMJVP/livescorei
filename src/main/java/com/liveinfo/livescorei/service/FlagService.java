@@ -18,6 +18,12 @@ public class FlagService {
         return flag;
     }
 
+    public boolean tsFlag(long ts) {
+    	if(LiveInfoConstant.CURR_TS==ts) {
+    		return true;
+    	}
+        return false;
+    }
     public void setFlag(boolean flag) {
         this.flag = flag;
     }

@@ -12,18 +12,22 @@ import java.time.ZoneId;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.liveinfo.livescorei.constant.LiveInfoConstant;
 import com.liveinfo.livescorei.model.MatchBoard;
 
 @Configuration
 public class LiveInfoConfig {
 
-    @Bean
+   
+
+
+	@Bean
     public Map<LocalDate, List<MatchBoard>> cacheMap() {
     	
     	//precompute on
     	 return Map.of(
-    			 LocalDate.of(2024, 06, 11),getMatchList(),
-    			 LocalDate.of(2024, 06, 12),getMatchList12()
+    			 LocalDate.of(2024, 06, 13),getMatchList(),
+    			 LocalDate.of(2024, 06, 14),getMatchList12()
     	            //getDate("a"), getMatchList(),
     	            //getDate("a"), getMatchList()
     	        );
@@ -33,12 +37,12 @@ public class LiveInfoConfig {
     
     private static List<MatchBoard> getMatchList12() {
 
-    	return List.of(new MatchBoard.Builder().withId("bad01ba2-e4e4-46fa-8bba-44c706c27c56")
-    			.withT1("India [IND]").withT2("United States [USA]").withDateTimeGMT("06/12/2024 14:30:00").withTStamp(1718081656574l).build(),
-    			new MatchBoard.Builder().withId("9a734ec9-93ca-4a7f-a3e8-e57f3cc92082")
-    			.withT1("Australia [AUS]").withT2("Namibia [NAM]").withDateTimeGMT("06/12/2024 00:30:00").withTStamp(1718081656574l).build(),
-    			new MatchBoard.Builder().withId("99430493-10c5-4d91-8af7-f5bf546d22d2")
-    			.withT1("Nepal [NEP]").withT2("Sri Lanka [SL]").withDateTimeGMT("06/11/2024 23:30:00").withTStamp(1718081656574l).build()
+    	return List.of(new MatchBoard.Builder().withId("86dc3169-c2e2-45ef-889f-e3b210d3c1ed")
+    			.withT1("Ireland [IRE]").withT2("United States [USA]").withDateTimeGMT("06/14/2024 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build(),
+    			new MatchBoard.Builder().withId("3081e597-a84f-4f85-a05a-02e4ef231e79")
+    			.withT1("Afghanistan [AFG]").withT2("Papua New Guinea [PNG]").withDateTimeGMT("06/14/2024 00:30:00").withTStamp(LiveInfoConstant.CURR_TS).build(),
+    			new MatchBoard.Builder().withId("37f27c0e-60fa-40eb-812e-e9910f292687")
+    			.withT1("England [ENG]").withT2("Oman [OMAN]").withDateTimeGMT("06/13/2024 19:00:00").withTStamp(LiveInfoConstant.CURR_TS).build()
     			);
     }
 
@@ -82,8 +86,8 @@ public class LiveInfoConfig {
 		 * 6b41a10b-61c0-4162-afd4-dd07bc84fb13 f5e74e9d-a49f-42a4-8d7e-84d05b837a4f
 		 * c99e9832-62a5-495d-b33f-f3a149f9441e
 		 */
-    	return List.of(new MatchBoard.Builder().withId("fac54fb3-4ad5-4e17-aa03-cac77db181fe")
-    			.withT1("Canada [CAN]").withT2("Pakistan [PAK]").withDateTimeGMT("06/11/2024 14:30:00").withTStamp(1718081656574l).build());
+    	return List.of(new MatchBoard.Builder().withId("29489f2a-f500-4cf9-99d3-74170619a3c4")
+    			.withT1("Bangladesh [BAN]").withT2("Netherlands [NED]").withDateTimeGMT("06/13/2024 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build());
     			//new MatchBoard.Builder().withId("8d740a04-3776-40cc-af7f-3f66b755275e").withT1("Afghanistan [AFG]").withT2("New Zealand [NZ]").build());
     	
     	//8d740a04-3776-40cc-af7f-3f66b755275e	"2024-06-07T23:30:00"	Afghanistan [AFG]	New Zealand [NZ]	
@@ -107,10 +111,10 @@ public class LiveInfoConfig {
             LocalDateTime localDateTime = zonedDateTime.toLocalDateTime();
             
             LocalDate localDate = zonedDateTime.toLocalDate();
-            System.out.println("Time: " + zonedDateTime.toLocalTime());
+           // System.out.println("Time: " + zonedDateTime.toLocalTime());
             // Print the LocalDateTime
-            System.out.println("LocalDateTime: " + localDateTime);
-            System.out.println("LocalDate: " + localDate);
+           // System.out.println("LocalDateTime: " + localDateTime);
+            //System.out.println("LocalDate: " + localDate);
             return localDateTime;
     	}catch(Exception e) {
     		System.err.println("Error occured "+e.getCause());
@@ -129,7 +133,7 @@ public class LiveInfoConfig {
 
     	        ZonedDateTime indiaTime = gmtDateTime.withZoneSameInstant(ZoneId.of("Asia/Kolkata"));
     	        //ZonedDateTime newYorkTime = gmtDateTime.withZoneSameInstant(ZoneId.of("America/New_York"));
-    	        System.out.println("gmtToIST "+indiaTime);
+    	       // System.out.println("gmtToIST "+indiaTime);
     		
             return indiaTime;
     	}catch(Exception e) {

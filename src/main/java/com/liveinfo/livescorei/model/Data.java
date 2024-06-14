@@ -23,6 +23,13 @@ public class Data {
     private boolean hasSquad;
     private boolean matchStarted;
     private boolean matchEnded;
+    
+    
+    Data(){
+    	
+    }
+    
+    
 	private Data(Builder builder) {
 		this.id = builder.id;
 		this.name = builder.name;

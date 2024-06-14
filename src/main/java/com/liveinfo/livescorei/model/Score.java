@@ -5,6 +5,11 @@ public class Score {
     private int w;
     private int o;
     private String inning;
+    
+    Score(){
+    	
+    }
+    
 	private Score(Builder builder) {
 		this.r = builder.r;
 		this.w = builder.w;

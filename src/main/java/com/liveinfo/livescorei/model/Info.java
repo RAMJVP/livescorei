@@ -12,6 +12,11 @@ public class Info {
     private int s;
     private int cache;
 
+    
+    Info(){
+    	
+    }
+    
     // Getters and Setters
     public int getHitsToday() {
         return hitsToday;

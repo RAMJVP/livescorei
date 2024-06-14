@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,6 +26,7 @@ public class LiveScoreController {
 	private FlagService flagService;
 	
 	
+	
 	@GetMapping("livescore")
 	public CricScore cricScore(@RequestParam("lapikey") String lapikey) {
 		if(Optional.ofNullable(lapikey).isPresent()) {
@@ -36,9 +38,9 @@ public class LiveScoreController {
 	}
 	
 	//get from local cache
-	@GetMapping("match")
-	public MatchBoard match(@RequestParam("lapikey") String lapikey) {
-		
+	@PostMapping("match")
+	public MatchBoard match1(@RequestParam("lapikey") String lapikey) {
+		System.out.println("new imp");
 		if(Optional.ofNullable(lapikey).isPresent()) {
 			if(LiveInfoConstant.lapikey.equals(lapikey)) {
 				return cricScoreService.getMatch();
@@ -47,16 +49,43 @@ public class LiveScoreController {
 		return new MatchBoard.Builder().build();
 	}
 	
+	/*
+	 * @GetMapping("match") public MatchBoard match(@RequestParam("lapikey") String
+	 * lapikey) {
+	 * 
+	 * if(Optional.ofNullable(lapikey).isPresent()) {
+	 * if(LiveInfoConstant.lapikey.equals(lapikey)) { return
+	 * cricScoreService.getMatch(); } } return new MatchBoard.Builder().build(); }
+	 */
+	
 	@GetMapping("/flag")
     public boolean getFlag() {
         return flagService.isFlag();
     }
 	
+	@GetMapping("/tsflag")
+    public boolean tsFlag(@RequestParam(value = "ts", defaultValue = "0") long ts) {
+      boolean res=flagService.tsFlag(ts);
+		System.out.println("res "+res);
+		return flagService.tsFlag(ts);
+    }
 	
 	
-	@GetMapping("matchboardinfo")
-	public MatchBoardInfo matchBoardInfo(@RequestParam("lapikey") String lapikey,@RequestParam("id") String id) {
+	/*
+	 * @GetMapping("matchboardinfo") public MatchBoardInfo
+	 * matchBoardInfo(@RequestParam("lapikey") String lapikey,@RequestParam("id")
+	 * String id) { System.out.println("exi imp");
+	 * if(Optional.ofNullable(lapikey).isPresent()) {
+	 * if(LiveInfoConstant.lapikey.equals(lapikey)) { return
+	 * cricScoreService.getMatchBoardInfo(id); } } return new
+	 * MatchBoardInfo.Builder().build(); }
+	 */
+	
+
+	@PostMapping("matchboardinfo")
+	public MatchBoardInfo matchBoardInfo1(@RequestParam("lapikey") String lapikey,@RequestParam("id") String id) {
 		
+		System.out.println("new imp");
 		if(Optional.ofNullable(lapikey).isPresent()) {
 			if(LiveInfoConstant.lapikey.equals(lapikey)) {
 				return cricScoreService.getMatchBoardInfo(id);
@@ -64,9 +93,6 @@ public class LiveScoreController {
 		}
 		return new MatchBoardInfo.Builder().build();
 	}
-	
-
-
 	
 	
 	

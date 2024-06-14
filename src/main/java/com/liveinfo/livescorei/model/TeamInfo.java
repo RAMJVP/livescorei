@@ -4,6 +4,12 @@ public class TeamInfo {
     private String name;
     private String shortname;
     private String img;
+    
+    
+    TeamInfo(){
+    	
+    }
+    
 	public String getName() {
 		return name;
 	}
