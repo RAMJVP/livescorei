@@ -40,7 +40,7 @@ public class LiveScoreController {
 	//get from local cache
 	@PostMapping("match")
 	public MatchBoard match1(@RequestParam("lapikey") String lapikey) {
-		System.out.println("new imp");
+		System.out.println("new imp ren");
 		if(Optional.ofNullable(lapikey).isPresent()) {
 			if(LiveInfoConstant.lapikey.equals(lapikey)) {
 				return cricScoreService.getMatch();
