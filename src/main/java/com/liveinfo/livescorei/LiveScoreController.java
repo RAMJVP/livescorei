@@ -1,5 +1,4 @@
 package com.liveinfo.livescorei;
-
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +39,7 @@ public class LiveScoreController {
 	//get from local cache
 	@PostMapping("match")
 	public MatchBoard match1(@RequestParam("lapikey") String lapikey) {
-		System.out.println("new imp ren");
+		System.out.println("new imp");
 		if(Optional.ofNullable(lapikey).isPresent()) {
 			if(LiveInfoConstant.lapikey.equals(lapikey)) {
 				return cricScoreService.getMatch();
@@ -66,8 +65,8 @@ public class LiveScoreController {
 	@GetMapping("/tsflag")
     public boolean tsFlag(@RequestParam(value = "ts", defaultValue = "0") long ts) {
       boolean res=flagService.tsFlag(ts);
-		System.out.println("res "+res);
-		return flagService.tsFlag(ts);
+	System.out.println("res "+res+" ts "+ts);
+		return res;
     }
 	
 	

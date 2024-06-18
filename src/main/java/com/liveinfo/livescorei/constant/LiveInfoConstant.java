@@ -9,7 +9,7 @@ public class LiveInfoConstant {
 	}
 
 	public static String lapikey = "1276331d";
-	public static final long CURR_TS = 1718288141078l;
+	public static final long CURR_TS = 1718499109849l;
 	public static int T20_hours = 3;
 	public static int innings_MIN = 90;
 	public static int break_MIN = 90;

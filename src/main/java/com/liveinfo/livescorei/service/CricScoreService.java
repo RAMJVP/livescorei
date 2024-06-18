@@ -49,15 +49,31 @@ public class CricScoreService {
 	//	if(false) {
 		try {
 			CricScore cricScoreList=liveServiceClient.getCricScore();
-			LocalDate currentDate = LocalDate.now().plusDays(4);
+			LocalDate currentDate = LocalDate.now().plusDays(4);// on particular day start and end
 			
+			/*
+			 * filterdScore= new
+			 * CricScore.Builder().withApikey(cricScoreList.getApikey()).withData(
+			 * cricScoreList.getData().stream().filter
+			 * (m->m.getSeries().equals("ICC Mens T20 World Cup 2024") &&
+			 * m.getMatchType().equals("t20") &&
+			 * DateTimeUtil.compareLocalDateTimeAndZonedDateTime(m.getDateTimeGMT(),
+			 * dateTimeService.toGmtZonedDateTime(currentDate))>= 0 &&
+			 * DateTimeUtil.compareLocalDateTimeAndZonedDateTime(m.getDateTimeGMT(),
+			 * dateTimeService.toGmtZonedDateTimeEnd(currentDate)) <= 0).
+			 * collect(Collectors.toList())).withStatus(cricScoreList.getStatus()).withInfo(
+			 * cricScoreList.getInfo()).build();
+			 */
+			
+			 
 			 filterdScore= new CricScore.Builder().withApikey(cricScoreList.getApikey()).withData(cricScoreList.getData().stream().filter
-					(m->m.getSeries().equals("ICC Mens T20 World Cup 2024") && m.getMatchType().equals("t20")
-					 && DateTimeUtil.compareLocalDateTimeAndZonedDateTime(m.getDateTimeGMT(), dateTimeService.toGmtZonedDateTime(currentDate))>= 0
-					 && DateTimeUtil.compareLocalDateTimeAndZonedDateTime(m.getDateTimeGMT(), dateTimeService.toGmtZonedDateTimeEnd(currentDate)) <= 0).
-					collect(Collectors.toList())).withStatus(cricScoreList.getStatus()).withInfo(cricScoreList.getInfo()).build();
-			
-			//System.out.println("cricScoreList "+cricScoreList);
+						(m->m.getSeries().equals("ICC Mens T20 World Cup 2024") && m.getMatchType().equals("t20")
+						 
+						 ).
+						collect(Collectors.toList())).withStatus(cricScoreList.getStatus()).withInfo(cricScoreList.getInfo()).build();
+				
+			 
+			 //System.out.println("cricScoreList "+cricScoreList);
 			
 		}catch(Exception e) {
 			System.err.println("error received "+ e.getCause());

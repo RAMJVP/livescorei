@@ -26,8 +26,9 @@ public class LiveInfoConfig {
     	
     	//precompute on
     	 return Map.of(
-    			 LocalDate.of(2024, 06, 13),getMatchList(),
-    			 LocalDate.of(2024, 06, 14),getMatchList12()
+    			 LocalDate.of(2024, 06, 21),getMatchList21(),
+    			 LocalDate.of(2024, 06, 22),getMatchList22(),
+    			 LocalDate.of(2024, 06, 23),getMatchList23()
     	            //getDate("a"), getMatchList(),
     	            //getDate("a"), getMatchList()
     	        );
@@ -35,19 +36,46 @@ public class LiveInfoConfig {
     
     
     
-    private static List<MatchBoard> getMatchList12() {
+    private static List<MatchBoard> getMatchList21() {
 
-    	return List.of(new MatchBoard.Builder().withId("86dc3169-c2e2-45ef-889f-e3b210d3c1ed")
-    			.withT1("Ireland [IRE]").withT2("United States [USA]").withDateTimeGMT("06/14/2024 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build(),
-    			new MatchBoard.Builder().withId("3081e597-a84f-4f85-a05a-02e4ef231e79")
-    			.withT1("Afghanistan [AFG]").withT2("Papua New Guinea [PNG]").withDateTimeGMT("06/14/2024 00:30:00").withTStamp(LiveInfoConstant.CURR_TS).build(),
-    			new MatchBoard.Builder().withId("37f27c0e-60fa-40eb-812e-e9910f292687")
-    			.withT1("England [ENG]").withT2("Oman [OMAN]").withDateTimeGMT("06/13/2024 19:00:00").withTStamp(LiveInfoConstant.CURR_TS).build()
+    	return List.of(new MatchBoard.Builder().withId("1")
+    			.withT1("Australia").withT2("Bangladesh").withDateTimeGMT("06/21/2024 12:00:00").withTStamp(LiveInfoConstant.CURR_TS).build(),
+    			new MatchBoard.Builder().withId("2")
+    			.withT1("England ").withT2("South Africa").withDateTimeGMT("06/21/2024 14:00:00").withTStamp(LiveInfoConstant.CURR_TS).build()
     			);
     }
 
+    
+    
+   
 
+    
+    private static List<MatchBoard> getMatchList22() {
 
+    	return List.of(
+    			new MatchBoard.Builder().withId("2")
+    			.withT1("India").withT2("Bangladesh").withDateTimeGMT("06/22/2024 14:00:00").withTStamp(LiveInfoConstant.CURR_TS).build(),
+    			new MatchBoard.Builder().withId("1")
+    			.withT1("West Indies").withT2("USA").withDateTimeGMT("06/22/2024 12:00:00").withTStamp(LiveInfoConstant.CURR_TS).build()
+    			);
+    }
+    
+    
+    
+    private static List<MatchBoard> getMatchList23() {
+
+    	return List.of(
+    			new MatchBoard.Builder().withId("1")
+    			.withT1("Afghanistan").withT2( "Australia").withDateTimeGMT("06/23/2024 12:00:00").withTStamp(LiveInfoConstant.CURR_TS).build(),
+    			new MatchBoard.Builder().withId("2")
+    			.withT1( "USA ").withT2("England").withDateTimeGMT("06/23/2024 14:00:00").withTStamp(LiveInfoConstant.CURR_TS).build()
+    			
+    			);
+    }
+    
+    
+    
+  
 	public static LocalDate getDate(String gmt) {
     	try {
     		// Given date-time string in ISO format (GMT/UTC+00)
