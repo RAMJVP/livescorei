@@ -25,16 +25,36 @@ public class LiveInfoConfig {
     public Map<LocalDate, List<MatchBoard>> cacheMap() {
     	
     	//precompute on
+		//gmt correct it , again21,22,23
     	 return Map.of(
-    			 LocalDate.of(2024, 06, 21),getMatchList21(),
-    			 LocalDate.of(2024, 06, 22),getMatchList22(),
-    			 LocalDate.of(2024, 06, 23),getMatchList23()
+    			 //LocalDate.of(2024, 06, 21),getMatchList21(),
+    			 //LocalDate.of(2024, 06, 22),getMatchList22(),
+    			 //LocalDate.of(2024, 06, 23),getMatchList23(),
+    			 LocalDate.of(2024, 06, 19),getMatchList19(),
+    			 LocalDate.of(2024, 06, 20),getMatchList20()
     	            //getDate("a"), getMatchList(),
     	            //getDate("a"), getMatchList()
     	        );
     }
     
     
+	
+	  private static List<MatchBoard> getMatchList20() {
+
+	    	return List.of(new MatchBoard.Builder().withId("6a636247-1db3-4e66-8b8d-7338bd4b7dd0")
+	    			.withT1("England [ENG]").withT2("West Indies [WI]").withDateTimeGMT("06/20/2024 00:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
+	    		
+	    			);
+	    }
+	  
+	  
+	  private static List<MatchBoard> getMatchList19() {
+
+	    	return List.of(new MatchBoard.Builder().withId("ead7b255-3c70-4d02-9605-1751a8e1ab6c")
+	    			.withT1("South Africa [RSA]").withT2("United States [USA]").withDateTimeGMT("6/19/2024 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
+	    			);
+	    }
+	  
     
     private static List<MatchBoard> getMatchList21() {
 
