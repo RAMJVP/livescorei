@@ -60,11 +60,10 @@ public class LiveInfoConfig {
 
     	return List.of(
     			new MatchBoard.Builder().withId("abf0116c-46d5-438e-808a-53fcc856bf19")
-    			.withT1("England ").withT2("South Africa").withDateTimeGMT("06/21/2024 08:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
+    			.withT1("England ").withT2("South Africa").withDateTimeGMT("06/21/2024 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
     			);
     }
 
-    
     
    
 
