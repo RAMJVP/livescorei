@@ -71,6 +71,8 @@ public class LiveInfoConfig {
     private static List<MatchBoard> getMatchList22() {
 
     	return List.of(
+    			new MatchBoard.Builder().withId("f46388e3-4537-403f-ac25-03d032f1a66d")
+    			.withT1("Bangladesh [BAN]").withT2("India [IND]").withDateTimeGMT("06/22/2024 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build(),
     			new MatchBoard.Builder().withId("87b45baa-7ec8-437e-ab03-bb0dbe6e1cc7")
     			.withT1("United States [USA]").withT2("West Indies [WI]").withDateTimeGMT("06/22/2024 00:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
     			);
