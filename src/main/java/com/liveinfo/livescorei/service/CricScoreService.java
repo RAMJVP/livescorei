@@ -49,7 +49,7 @@ public class CricScoreService {
 	//	if(false) {
 		try {
 			CricScore cricScoreList=liveServiceClient.getCricScore();
-			LocalDate currentDate = LocalDate.now().plusDays(0);// on particular day start and end
+			LocalDate currentDate = LocalDate.now().plusDays(1);// on particular day start and end
 			
 			/*
 			 * filterdScore= new
