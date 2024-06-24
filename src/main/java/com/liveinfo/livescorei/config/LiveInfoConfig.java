@@ -27,11 +27,11 @@ public class LiveInfoConfig {
     	//precompute on
 		//gmt correct it , again21,22,23
     	 return Map.of(
-    			 LocalDate.of(2024, 06, 21),getMatchList21(),
-    			 LocalDate.of(2024, 06, 22),getMatchList22(),
-    			 LocalDate.of(2024, 06, 23),getMatchList23(),
-    			 LocalDate.of(2024, 06, 19),getMatchList19(),
-    			 LocalDate.of(2024, 06, 20),getMatchList20()
+    			 //LocalDate.of(2024, 06, 21),getMatchList21(),
+    			 //LocalDate.of(2024, 06, 22),getMatchList22(),
+    			 //LocalDate.of(2024, 06, 23),getMatchList23(),
+    			 //LocalDate.of(2024, 06, 19),getMatchList19(),
+    			 LocalDate.of(2024, 06, 24),getMatchList24()
     	            //getDate("a"), getMatchList(),
     	            //getDate("a"), getMatchList()
     	        );
@@ -39,11 +39,10 @@ public class LiveInfoConfig {
     
     
 	
-	  private static List<MatchBoard> getMatchList20() {
+	  private static List<MatchBoard> getMatchList24() {
 
-	    	return List.of(new MatchBoard.Builder().withId("6a636247-1db3-4e66-8b8d-7338bd4b7dd0")
-	    			.withT1("England [ENG]").withT2("West Indies [WI]").withDateTimeGMT("06/20/2024 00:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
-	    		
+	    	return List.of(new MatchBoard.Builder().withId("44b16720-8b94-48c5-b865-502af6ba671d")
+	    			.withT1("Australia [AUS]").withT2("India [IND]").withDateTimeGMT("06/24/2024 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
 	    			);
 	    }
 	  
