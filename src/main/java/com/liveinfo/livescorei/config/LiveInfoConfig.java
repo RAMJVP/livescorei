@@ -30,7 +30,7 @@ public class LiveInfoConfig {
     			 //LocalDate.of(2024, 06, 21),getMatchList21(),
     			 //LocalDate.of(2024, 06, 22),getMatchList22(),
     			 //LocalDate.of(2024, 06, 23),getMatchList23(),
-    			 //LocalDate.of(2024, 06, 19),getMatchList19(),
+    			 LocalDate.of(2024, 06, 25),getMatchList25(),
     			 LocalDate.of(2024, 06, 24),getMatchList24()
     	            //getDate("a"), getMatchList(),
     	            //getDate("a"), getMatchList()
@@ -47,10 +47,10 @@ public class LiveInfoConfig {
 	    }
 	  
 	  
-	  private static List<MatchBoard> getMatchList19() {
+	  private static List<MatchBoard> getMatchList25() {
 
-	    	return List.of(new MatchBoard.Builder().withId("ead7b255-3c70-4d02-9605-1751a8e1ab6c")
-	    			.withT1("South Africa [RSA]").withT2("United States [USA]").withDateTimeGMT("6/19/2024 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
+	    	return List.of(new MatchBoard.Builder().withId("b07109a0-4a66-44e7-ac74-7d931b9b9ca5")
+	    			.withT1("Afghanistan [AFG]").withT2("Bangladesh [BAN]").withDateTimeGMT("6/25/2024 00:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
 	    			);
 	    }
 	  
