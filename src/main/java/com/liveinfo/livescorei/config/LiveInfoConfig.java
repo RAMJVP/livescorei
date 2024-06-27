@@ -28,8 +28,8 @@ public class LiveInfoConfig {
 		//gmt correct it , again21,22,23
     	 return Map.of(
     			 //LocalDate.of(2024, 06, 21),getMatchList21(),
-    			 //LocalDate.of(2024, 06, 22),getMatchList22(),
-    			 //LocalDate.of(2024, 06, 23),getMatchList23(),
+    			 LocalDate.of(2024, 06, 27),getMatchList27(),
+    			 LocalDate.of(2024, 06, 26),getMatchList26(),
     			 LocalDate.of(2024, 06, 25),getMatchList25(),
     			 LocalDate.of(2024, 06, 24),getMatchList24()
     	            //getDate("a"), getMatchList(),
@@ -67,19 +67,17 @@ public class LiveInfoConfig {
    
 
     
-    private static List<MatchBoard> getMatchList22() {
+    private static List<MatchBoard> getMatchList27() {
 
     	return List.of(
-    			new MatchBoard.Builder().withId("f46388e3-4537-403f-ac25-03d032f1a66d")
-    			.withT1("Bangladesh [BAN]").withT2("India [IND]").withDateTimeGMT("06/22/2024 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build(),
-    			new MatchBoard.Builder().withId("87b45baa-7ec8-437e-ab03-bb0dbe6e1cc7")
-    			.withT1("United States [USA]").withT2("West Indies [WI]").withDateTimeGMT("06/22/2024 00:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
+    			new MatchBoard.Builder().withId("c5d60858-85ff-4b8f-971c-69b933cf7027")
+    			.withT1("England [ENG]").withT2("India [IND]").withDateTimeGMT("06/27/2024 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
     			);
     }
     
     
     
-    private static List<MatchBoard> getMatchList23() {
+    private static List<MatchBoard> getMatchList26() {
 
     	return List.of(
     			
