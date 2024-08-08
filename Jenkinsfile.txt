@@ -1,0 +1,46 @@
+
+pipeline {
+    agent any
+    tools{
+        gradle 'gradle1'
+    }
+  
+ 
+   
+    stages{
+        stage('clone repo'){
+            steps{
+               git branch: 'main', url: 'https://github.com/RAMJVP/livescorei.git'
+            }
+        }
+         stage('Build repo'){
+            steps{
+               sh 'gradle clean build'
+            }
+        }
+        
+		 stage('Build docker image'){
+            steps{
+                script{
+                   
+                    sh 'docker build -t jeevanvpatel/livescorei .'
+                }
+            }
+        }
+        
+        
+         stage('Push image to Hub'){
+            steps{
+                script{
+				
+				withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
+					sh 'docker login -u jeevanvpatel -p ${dockerhubpwd}'
+				}
+                   sh 'docker push jeevanvpatel/livescorei'
+                }
+            }
+        }
+		
+}
+
+}
