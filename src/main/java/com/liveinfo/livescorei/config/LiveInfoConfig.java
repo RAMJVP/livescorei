@@ -27,11 +27,11 @@ public class LiveInfoConfig {
     	//precompute on
 		//gmt correct it , again21,22,23
     	 return Map.of(
-    			 LocalDate.of(2024, 06, 29),getMatchList29(),
-    			 LocalDate.of(2024, 06, 27),getMatchList27(),
-    			 LocalDate.of(2024, 06, 26),getMatchList26(),
-    			 LocalDate.of(2024, 06, 25),getMatchList25(),
-    			 LocalDate.of(2024, 06, 24),getMatchList24()
+    			 LocalDate.of(2024, 02, 11),getMatchList11(),
+    			 LocalDate.of(2024, 02, 12),getMatchList12()
+    			// LocalDate.of(2024, 06, 26),getMatchList26(),
+    			 //LocalDate.of(2024, 06, 25),getMatchList25(),
+    			 //LocalDate.of(2024, 06, 24),getMatchList24()
     	            //getDate("a"), getMatchList(),
     	            //getDate("a"), getMatchList()
     	        );
@@ -55,11 +55,11 @@ public class LiveInfoConfig {
 	    }
 	  
     
-    private static List<MatchBoard> getMatchList29() {
+    private static List<MatchBoard> getMatchList11() {
     
     	return List.of(
-    			new MatchBoard.Builder().withId("76667194-a233-4c08-a6d3-f1f891e86b58")
-    			.withT1("India [IND]").withT2("South Africa [RSA]").withDateTimeGMT("06/29/2024 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
+    			new MatchBoard.Builder().withId("87abc39a-bff8-4891-ad56-05dc19d2b0ec")
+    			.withT1("India").withT2("England").withDateTimeGMT("02/11/2025 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
     			);
     }
 
@@ -67,11 +67,11 @@ public class LiveInfoConfig {
    
 
     
-    private static List<MatchBoard> getMatchList27() {
+    private static List<MatchBoard> getMatchList12() {
 
     	return List.of(
-    			new MatchBoard.Builder().withId("c5d60858-85ff-4b8f-971c-69b933cf7027")
-    			.withT1("England [ENG]").withT2("India [IND]").withDateTimeGMT("06/27/2024 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
+    			new MatchBoard.Builder().withId("87abc39a-bff8-4891-ad56-05dc19d2b0ec")
+    			.withT1("England [ENG]").withT2("India [IND]").withDateTimeGMT("02/12/2025 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
     			);
     }
     
