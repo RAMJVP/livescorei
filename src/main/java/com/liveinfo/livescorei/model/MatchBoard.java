@@ -110,6 +110,14 @@ public class MatchBoard {
 	public void settStamp(long tStamp) {
 		this.tStamp = tStamp;
 	}
+
+
+	@Override
+	public String toString() {
+		return "MatchBoard [id=" + id + ", t1=" + t1 + ", t2=" + t2 + ", dateTimeGMT=" + dateTimeGMT + ", tStamp="
+				+ tStamp + "]";
+	}
+	
 	
 
 }
