@@ -42,6 +42,7 @@ public class LiveScoreController {
 		System.out.println("new imp");
 		if(Optional.ofNullable(lapikey).isPresent()) {
 			if(LiveInfoConstant.lapikey.equals(lapikey)) {
+				System.out.println("cricScoreService.getMatch();##"+cricScoreService.getMatch());
 				return cricScoreService.getMatch();
 			}	
 		}
