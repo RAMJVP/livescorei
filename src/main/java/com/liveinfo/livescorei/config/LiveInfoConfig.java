@@ -27,8 +27,8 @@ public class LiveInfoConfig {
     	//precompute on
 		//gmt correct it , again21,22,23
     	 return Map.of(
-    			 LocalDate.of(2024, 02, 11),getMatchList11(),
-    			 LocalDate.of(2024, 02, 12),getMatchList12()
+    			 LocalDate.of(2025, 02, 11),getMatchList11(),
+    			 LocalDate.of(2025, 02, 12),getMatchList12()
     			// LocalDate.of(2024, 06, 26),getMatchList26(),
     			 //LocalDate.of(2024, 06, 25),getMatchList25(),
     			 //LocalDate.of(2024, 06, 24),getMatchList24()
