@@ -42,7 +42,7 @@ public class LiveInfoConfig {
 	  private static List<MatchBoard> getMatchList24() {
 
 	    	return List.of(new MatchBoard.Builder().withId("44b16720-8b94-48c5-b865-502af6ba671d")
-	    			.withT1("Australia [AUS]").withT2("India [IND]").withDateTimeGMT("06/24/2024 08:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
+	    			.withT1("Australia [AUS]").withT2("India [IND]").withDateTimeGMT("06/24/2024 08:00:00").withTStamp(LiveInfoConstant.CURR_TS).build()
 	    			);
 	    }
 	  
