@@ -27,8 +27,8 @@ public class LiveInfoConfig {
     	//precompute on
 		//gmt correct it , again21,22,23
     	 return Map.of(
-    			 LocalDate.of(2025, 02, 11),getMatchList11(),
-    			 LocalDate.of(2025, 02, 12),getMatchList12()
+    			 LocalDate.of(2025, 02, 23),getMatchList23(),
+    			 LocalDate.of(2025, 02, 24),getMatchList12()
     			// LocalDate.of(2024, 06, 26),getMatchList26(),
     			 //LocalDate.of(2024, 06, 25),getMatchList25(),
     			 //LocalDate.of(2024, 06, 24),getMatchList24()
@@ -55,11 +55,11 @@ public class LiveInfoConfig {
 	    }
 	  
     
-    private static List<MatchBoard> getMatchList11() {
+    private static List<MatchBoard> getMatchList23() {
     
     	return List.of(
-    			new MatchBoard.Builder().withId("87abc39a-bff8-4891-ad56-05dc19d2b0ec")
-    			.withT1("India").withT2("England").withDateTimeGMT("02/11/2025 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
+    			new MatchBoard.Builder().withId("49fc7a37-da67-435e-bf5f-00da233e9ff4")
+    			.withT1("India").withT2("PAk").withDateTimeGMT("02/23/2025 14:30:00").withTStamp(LiveInfoConstant.CURR_TS).build()
     			);
     }
 
