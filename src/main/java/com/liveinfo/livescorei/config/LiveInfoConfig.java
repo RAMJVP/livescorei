@@ -59,7 +59,7 @@ public class LiveInfoConfig {
     
     	return List.of(
     			new MatchBoard.Builder().withId("49fc7a37-da67-435e-bf5f-00da233e9ff4")
-    			.withT1("India").withT2("PAk").withDateTimeGMT("02/23/2025 08:00:00").withTStamp(LiveInfoConstant.CURR_TS).build()
+    			.withT1("India").withT2("PAk").withDateTimeGMT("02/23/2025 09:00:00").withTStamp(LiveInfoConstant.CURR_TS).build()
     			);
     }
 
